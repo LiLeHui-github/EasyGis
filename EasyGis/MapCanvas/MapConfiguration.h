@@ -10,7 +10,7 @@ public:
     static MapConfiguration* instance();
 
     void initConfiguration(int minZoom, int maxZoom);
-    MapConfig* findConfig(double xspan, double viewWidth);
+    const MapConfig* findConfig(double xspan, double viewWidth);
     
 private:
     QMap<double, MapConfig> m_Zooms;

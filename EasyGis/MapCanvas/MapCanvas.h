@@ -20,7 +20,6 @@ protected:
 
 private:
     MapCanvasItem* m_MapItem;
-
     QPointF m_PressPos;
 
 };

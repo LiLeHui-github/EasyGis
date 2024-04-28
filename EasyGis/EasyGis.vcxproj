@@ -99,6 +99,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Layer\BaseLayer.cpp" />
     <ClCompile Include="CRS\CRS.cpp" />
     <ClCompile Include="MapCanvas\MapCanvas.cpp" />
     <ClCompile Include="Core\Rectangle.cpp" />
@@ -106,6 +107,7 @@
     <ClCompile Include="Core\Vector3D.cpp" />
     <ClCompile Include="MapCanvas\MapCanvasItem.cpp" />
     <ClCompile Include="MapCanvas\MapConfiguration.cpp" />
+    <ClCompile Include="Layer\WMSTileLayer.cpp" />
     <QtRcc Include="MainWindow\MainWindow.qrc" />
     <QtUic Include="MainWindow\MainWindow.ui" />
     <QtMoc Include="MainWindow\MainWindow.h" />
@@ -116,6 +118,8 @@
     <QtMoc Include="MapCanvas\MapCanvas.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Layer\WMSTileLayer.h" />
+    <QtMoc Include="Layer\BaseLayer.h" />
     <ClInclude Include="Core\MapConfig.h" />
     <ClInclude Include="Core\Rectangle.h" />
     <ClInclude Include="Core\PointXY.h" />

@@ -17,7 +17,7 @@ void MapConfiguration::initConfiguration(int minZoom, int maxZoom)
     {
         MapConfig config;
         config.ZoomLevel = zoom;
-        config.TileCount = 2 << zoom;
+        config.TileCount = 1 << zoom;
         config.ViewWidth = config.TileCount * 256.0;
         config.MapResolution = WGS84.width() / config.ViewWidth;
         config.TileUnitWidth = config.MapResolution * 256.0;
@@ -25,21 +25,23 @@ void MapConfiguration::initConfiguration(int minZoom, int maxZoom)
     }
 }
 
-MapConfig* MapConfiguration::findConfig(double xspan, double viewWidth)
+const MapConfig* MapConfiguration::findConfig(double xspan, double viewWidth)
 {
-    auto it = m_Zooms.begin();
+    auto it = m_Zooms.cbegin();
     auto prev = it;
 
-    while(it != m_Zooms.end() && it.key() < xspan)
+    while (it != m_Zooms.cend() && it.key() < xspan)
     {
         prev = it;
         ++it;
     }
 
-    if(it == m_Zooms.end() || it != m_Zooms.end() && it.key() - xspan > xspan - prev.key())
+    if (it == m_Zooms.cend() ||
+        (it != m_Zooms.cbegin() && xspan - prev.key() < it.key() - xspan))
     {
         it = prev;
     }
+
 
     while (it != m_Zooms.end() && it.value().ViewWidth < viewWidth)
     {
@@ -47,5 +49,4 @@ MapConfig* MapConfiguration::findConfig(double xspan, double viewWidth)
     }
 
     return &it.value();
-
 }

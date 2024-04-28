@@ -61,12 +61,21 @@
     <ClCompile Include="CRS\CRS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Layer\BaseLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer\WMSTileLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MapCanvas\MapCanvas.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="MapCanvas\MapCanvasItem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Layer\BaseLayer.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -87,6 +96,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Core\MapConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer\WMSTileLayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

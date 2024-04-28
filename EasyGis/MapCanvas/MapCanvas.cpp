@@ -4,6 +4,7 @@
 #include <QGraphicsScene>
 
 #include "MapCanvasItem.h"
+#include "Layer/WMSTileLayer.h"
 
 MapCanvas::MapCanvas(QWidget *parent)
     : QGraphicsView(parent)
@@ -14,12 +15,16 @@ MapCanvas::MapCanvas(QWidget *parent)
     QGraphicsScene* scene = new QGraphicsScene(this);
     setScene(scene);
 
-    m_MapItem = new MapCanvasItem(this);
-
     QSizeF size = viewport()->size();
     scene->setSceneRect(QRectF(0, 0, size.width(), size.height()));
     this->setSceneRect(QRectF(0, 0, size.width(), size.height()));
+
+    m_MapItem = new MapCanvasItem(this);
     m_MapItem->mapResizeViewExtent(size);
+
+    WMSTileLayer* wmsLayer = new WMSTileLayer(m_MapItem);
+    wmsLayer->setId(createUid());
+    m_MapItem->addLayer(wmsLayer);
 }
 
 MapCanvas::~MapCanvas()
