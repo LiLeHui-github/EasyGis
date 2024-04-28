@@ -7,6 +7,8 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindowClass; };
 QT_END_NAMESPACE
 
+class MapCanvas;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -17,4 +19,7 @@ public:
 
 private:
     Ui::MainWindowClass *ui;
+
+private:
+    MapCanvas* m_Canvas;
 };
