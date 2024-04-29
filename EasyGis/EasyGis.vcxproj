@@ -108,6 +108,7 @@
     <ClCompile Include="MapCanvas\MapCanvasItem.cpp" />
     <ClCompile Include="MapCanvas\MapConfiguration.cpp" />
     <ClCompile Include="Layer\WMSTileLayer.cpp" />
+    <ClCompile Include="Layer\TileLoaderService.cpp" />
     <QtRcc Include="MainWindow\MainWindow.qrc" />
     <QtUic Include="MainWindow\MainWindow.ui" />
     <QtMoc Include="MainWindow\MainWindow.h" />
@@ -119,8 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Layer\WMSTileLayer.h" />
+    <QtMoc Include="Layer\TileLoaderService.h" />
     <QtMoc Include="Layer\BaseLayer.h" />
-    <ClInclude Include="Core\MapConfig.h" />
+    <ClInclude Include="Core\MapDefines.h" />
     <ClInclude Include="Core\Rectangle.h" />
     <ClInclude Include="Core\PointXY.h" />
     <ClInclude Include="Core\Vector3D.h" />

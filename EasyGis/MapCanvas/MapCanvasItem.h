@@ -3,7 +3,7 @@
 #include <QGraphicsObject>
 
 #include "Core/Rectangle.h"
-#include "Core/MapConfig.h"
+#include "Core/MapDefines.h"
 
 class QTimer;
 class MapCanvas;

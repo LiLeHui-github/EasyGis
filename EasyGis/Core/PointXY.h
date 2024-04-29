@@ -18,6 +18,7 @@ public:
     PointXY operator*(double v) const;
     PointXY& operator*=(double v);
 
+    QPointF toPointF() const;
     QString toString() const;
 
 private:

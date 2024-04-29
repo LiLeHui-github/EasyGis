@@ -142,8 +142,12 @@ void MapCanvasItem::mapScaleMapExtent(double scaleFactor, const QPointF& scaleCe
     PointXY mousePosByMap = computeViewToMap(scaleCenter);
     PointXY newCenter = PointXY{ mousePosByMap.x() + ((oldCenter.x() - mousePosByMap.x()) * scaleFactor),
                                  mousePosByMap.y() + ((oldCenter.y() - mousePosByMap.y()) * scaleFactor) };
+
+
+    double w = mapExtent().width();
     mapExtent().scale(scaleFactor, &newCenter);
     mapExtent().checkRange();
+    w = mapExtent().width();
     if (old != mapExtent())
     {
         updateMap();

@@ -4,6 +4,7 @@
 #include <QUuid>
 #include <QPainter>
 
+#include "Core/MapDefines.h"
 #include "Core/PointXY.h"
 
 class MapCanvasItem;

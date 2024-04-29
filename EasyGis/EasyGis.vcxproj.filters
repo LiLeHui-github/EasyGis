@@ -67,6 +67,9 @@
     <ClCompile Include="Layer\WMSTileLayer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Layer\TileLoaderService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MapCanvas\MapCanvas.h">
@@ -76,6 +79,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="Layer\BaseLayer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Layer\TileLoaderService.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -95,7 +101,7 @@
     <ClInclude Include="CRS\CRS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\MapConfig.h">
+    <ClInclude Include="Core\MapDefines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Layer\WMSTileLayer.h">

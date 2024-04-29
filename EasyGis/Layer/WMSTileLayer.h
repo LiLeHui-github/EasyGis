@@ -5,7 +5,7 @@
 class WMSTileLayer : public BaseLayer
 {
 public:
-    explicit WMSTileLayer(MapCanvasItem* map);
+    explicit WMSTileLayer(const QString& url, MapCanvasItem* map);
 
     QString type() const override;
 
@@ -16,5 +16,8 @@ protected:
 private:
     void createXyzTileResquests();
 
+private:
+    QString m_Url;
+    QImage m_SwapImage;
 };
 

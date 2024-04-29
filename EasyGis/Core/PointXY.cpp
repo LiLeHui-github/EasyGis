@@ -48,6 +48,11 @@ PointXY& PointXY::operator*=(double v)
     return *this;
 }
 
+QPointF PointXY::toPointF() const
+{
+    return QPointF{ m_X, m_Y };
+}
+
 QString PointXY::toString() const
 {
     return QString{ u8"{%1, %2}" }

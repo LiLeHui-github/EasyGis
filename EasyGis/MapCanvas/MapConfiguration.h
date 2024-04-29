@@ -2,7 +2,7 @@
 
 #include <QMap>
 
-#include "Core/MapConfig.h"
+#include "Core/MapDefines.h"
 
 class MapConfiguration
 {

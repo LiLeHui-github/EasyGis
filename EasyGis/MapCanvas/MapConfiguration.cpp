@@ -37,11 +37,10 @@ const MapConfig* MapConfiguration::findConfig(double xspan, double viewWidth)
     }
 
     if (it == m_Zooms.cend() ||
-        (it != m_Zooms.cbegin() && xspan - prev.key() < it.key() - xspan))
+        (it != m_Zooms.cend() && xspan - prev.key() < it.key() - xspan))
     {
         it = prev;
     }
-
 
     while (it != m_Zooms.end() && it.value().ViewWidth < viewWidth)
     {

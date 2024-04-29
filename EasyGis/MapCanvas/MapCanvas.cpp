@@ -22,7 +22,7 @@ MapCanvas::MapCanvas(QWidget *parent)
     m_MapItem = new MapCanvasItem(this);
     m_MapItem->mapResizeViewExtent(size);
 
-    WMSTileLayer* wmsLayer = new WMSTileLayer(m_MapItem);
+    WMSTileLayer* wmsLayer = new WMSTileLayer(QString{ u8"E:/BaiduNetdiskDownload/MapTile/%1/%2/%3.jpg" }, m_MapItem);
     wmsLayer->setId(createUid());
     m_MapItem->addLayer(wmsLayer);
 }
